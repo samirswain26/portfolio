@@ -64,3 +64,60 @@ export const testimonials = [
       "John not only delivered outstanding code but also brought innovative solutions to our challenges. His collaborative approach made him a valuable team member.",
   },
 ];
+
+export const projects = [
+  {
+    title: "E-Commerce Platform",
+    description:
+      "A full-featured e-commerce platform with real-time inventory management, secure payments, and an intuitive admin dashboard.",
+    image:
+      "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Stripe",
+      "PostgreSQL",
+    ],
+    liveUrl: "https://ecommerce-demo.com",
+    githubUrl: "https://github.com/johndoe/ecommerce",
+    features: [
+      "Real-time inventory tracking",
+      "Secure payment processing",
+      "Admin dashboard",
+      "Order management",
+    ],
+  },
+  {
+    title: "AI-Powered Task Manager",
+    description:
+      "Smart task management application that uses AI to prioritize and categorize tasks, with team collaboration features.",
+    image:
+      "https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?w=800&h=600&fit=crop",
+    technologies: ["React", "Node.js", "OpenAI", "MongoDB", "WebSocket"],
+    liveUrl: "https://taskmanager-demo.com",
+    githubUrl: "https://github.com/johndoe/taskmanager",
+    features: [
+      "AI task prioritization",
+      "Real-time collaboration",
+      "Custom workflows",
+      "Analytics dashboard",
+    ],
+  },
+  {
+    title: "Social Media Analytics",
+    description:
+      "Comprehensive social media analytics platform providing insights and engagement metrics across multiple platforms.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    technologies: ["Vue.js", "Python", "D3.js", "AWS", "Redis"],
+    liveUrl: "https://analytics-demo.com",
+    githubUrl: "https://github.com/johndoe/analytics",
+    features: [
+      "Cross-platform analytics",
+      "Custom report generation",
+      "Engagement tracking",
+      "Trend analysis",
+    ],
+  },
+];
