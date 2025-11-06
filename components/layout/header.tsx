@@ -7,6 +7,15 @@ import Link from "next/link";
 
 const Header = () => {
   const [isMobileMenuOpen, setisMobileMenuOpen] = useState(false);
+  const [isScrolled, setisScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+        setisMobileMenuOpen(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return() => window.removeEventListener("scroll", handleScroll)
+  },[])
 
   const menuItems = [
     { label: "About", href: "#about" },
@@ -18,7 +27,9 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 transition-all duration-300`}
+      className={`fixed top-0 left-0 right-0 transition-all duration-300 ${
+        isScrolled ? "bg-background/80 backdrop-blur-md border-b" : ""
+      }`}
     >
       <div className="conatiner mx-auto px-4">
         <div className="flex items-center justify-between h-16">
