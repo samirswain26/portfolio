@@ -33,10 +33,6 @@ const GithubStats = ({ username }: Props) => {
       try {
         const response = await fetch(`/api/github?username=${username}`);
 
-        // if(!response.ok){
-        //   throw new Error(`Error fetching data : ${response.statusText}`)
-        // }
-
         if (!response.ok) {
           const text = await response.text();
           throw new Error(
@@ -45,7 +41,6 @@ const GithubStats = ({ username }: Props) => {
         }
 
         const data = await response.json();
-        console.log(data)
         setStats(data);
       } catch (error) {
         setError("failed to fetch github stats");
