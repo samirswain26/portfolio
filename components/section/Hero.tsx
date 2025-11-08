@@ -21,10 +21,13 @@ const Hero = () => {
             Full-Stack Developer — Crafting Modern Web Experiences
           </p>
           <div className="flex gap-4">
-            <Button variant={"default"} className="gap-2">
-              <Mail className="h-4 w-4" />
-              Contact Me
-            </Button>
+
+            <a href="mailto:samirkumarswain267@gmail.com" target="_blank" rel="noopener noreferrer">
+              <Button variant={"default"} className="gap-2">
+                <Mail className="w-5 h-5" />
+                Contact Me
+              </Button>
+            </a>
 
             <Link href={"https://github.com/samirswain26"} target="_blank">
               <Button variant={"default"} className="gap-2">

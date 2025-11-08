@@ -86,9 +86,11 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full">
-          Send Message
-        </Button>
+        <div className="mx-3">
+          <Button type="submit" className="w-full">
+            Send Message
+          </Button>
+        </div>
       </form>
     </Form>
   );
