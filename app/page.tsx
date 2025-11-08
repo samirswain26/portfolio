@@ -1,4 +1,5 @@
 "use client"
+import Contact from "@/components/section/Contact";
 import GithubStats from "@/components/section/githubStats";
 import Hero from "@/components/section/Hero";
 import Projects from "@/components/section/Projects";
@@ -29,6 +30,8 @@ export default function Home() {
         </motion.div>
 
       </section>
+
+      <Contact />
 
     </main>
   );

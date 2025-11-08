@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Calendar, GitBranch, GitCommit, Star } from "lucide-react";
 import { motion } from "framer-motion";
-import { stat } from "fs";
-import { count } from "console";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
