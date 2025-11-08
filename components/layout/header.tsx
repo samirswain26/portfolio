@@ -5,6 +5,16 @@ import { Download, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
+
+const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/resume.pdf"; 
+  link.download = "Samir_Kumar_Swain_Resume.pdf"; 
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 const Header = () => {
   const [isMobileMenuOpen, setisMobileMenuOpen] = useState(false);
   const [isScrolled, setisScrolled] = useState(false)
@@ -48,7 +58,8 @@ const Header = () => {
                 {Item.label}
               </a>
             ))}
-            <Button variant={"default"} size={"sm"} className="gap-2">
+            
+            <Button onClick={handleDownload} variant={"default"} size={"sm"} className="gap-2">
               <Download className="h-4 w-4" />
               Resume
             </Button>
@@ -91,7 +102,7 @@ const Header = () => {
                   {item.label}
                 </a>
               ))}
-              <Button variant={"default"} size={"sm"} className="gap-2">
+              <Button  className="gap-2" onClick={handleDownload}>
                 <Download className="h-4 w-4" />
                 Resume
               </Button>
