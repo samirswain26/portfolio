@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="container mx-auto px-4 py-32 pb-20">
+    <section id="about" className="container mx-auto px-4 py-32 pb-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}

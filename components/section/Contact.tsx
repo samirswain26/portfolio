@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <section className="container mx-auto px-4 py-20">
+    <section id="contact" className="container mx-auto px-4 py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -71,12 +71,12 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="flex justify-center items-center mt-20 "
         >
-            <Image 
+          <Image
             src={"/contact.svg"}
             alt="Contact Illustration"
             width={500}
             height={800}
-            />
+          />
         </motion.div>
       </div>
     </section>

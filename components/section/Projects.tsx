@@ -100,16 +100,15 @@ const Projects = () => {
                     ))}
                   </div>
                   <ul className="space-y-2">
-                    {
-                        project.features.map((feature) => (
-                            <li 
-                            key={feature}
-                            className="flex items-center gap-2 text-sm text-muted-foreground">
-                                <Check  className="h-4 w-4 text-blue-500" />
-                                {feature}
-                            </li>
-                        ))
-                    }
+                    {project.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-center gap-2 text-sm text-muted-foreground"
+                      >
+                        <Check className="h-4 w-4 text-blue-500" />
+                        {feature}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
