@@ -31,10 +31,27 @@ const ContactForm = () => {
     },
   });
 
-  function OnSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast("Message sent successfully!");
-    form.reset();
+  async function OnSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!res.ok) {
+        toast.error("Failed to send message.");
+        return;
+      }
+
+      toast.success("Message sent successfully!");
+      form.reset();
+    } catch (error) {
+      toast.error("Something went wrong!");
+      console.error(error);
+    }
   }
 
   return (
